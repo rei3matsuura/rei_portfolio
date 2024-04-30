@@ -11,7 +11,7 @@ import { useState } from "react";
 // const pages = ['Top', 'Education', 'Hobby', 'Activities'];
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
-
+//top
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
@@ -48,7 +48,7 @@ function ResponsiveAppBar() {
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
-              color: 'inherit',
+              color: 'inherit', //元は'inherit'
               textDecoration: 'none',
             }}
           >
@@ -115,7 +115,7 @@ function ResponsiveAppBar() {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ my: 2, color: 'white', display: 'block' }} //元はwhite
               >
                 {page}
               </Button>
@@ -164,7 +164,7 @@ export default ResponsiveAppBar;
 export function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
+      {/* <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
         <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
           Get started by editing&nbsp;
           <code className="font-mono font-bold">src/app/page.tsx</code>
@@ -187,9 +187,10 @@ export function Home() {
             />
           </a>
         </div>
-      </div>
+      </div> */}
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
+
+      {/* <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
         <Image
           className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
           src="/next.svg"
@@ -198,7 +199,65 @@ export function Home() {
           height={37}
           priority
         />
+      </div> */}
+
+
+      <div className="flex w-full max-w-5xl items-center justify-around font-mono lg:flex mb-20">
+        <div className="flex flex-col justify-center p-8 text-center">
+          <h1 className="text-rei-red text-6xl font-bold mb-3">
+            松浦　麗
+          </h1>
+          <p className="text-rei-red text-4xl font-semibold">
+            MATSUURA REI
+          </p>
+        </div>
+
+        <div className="flex justify-center items-center p-8">
+        <Image
+          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
+          src="/next.svg"
+          alt="Next.js Logo"
+          width={130} //元は100んでも，next.svgなら180
+          height={24} //37でもOK？
+          priority
+          />
+        </div>
       </div>
+
+
+      <div className="relative flex flex justify-center overflow-hidden rounded-lg bg-rei-cream mb-40">
+        <div className="absolute top-2 left-2 rounded-3xl bg-rei-red py-1 px-2 text-lg font-bold text-rei-cream">
+          基本情報
+        </div>
+        <div className="h-40 w-[700px] text-rei-dark text-2xl h-full bg-rei-cream grid place-content-center">
+          <div>
+            　
+          </div>
+          <div>2001.7.22生</div>
+          <div>広島出身（「じゃけん」「じゃけぇ」より「じゃけー」派）</div>
+          <div>ポメラニアン好き</div>
+        </div>
+      </div>
+
+      {/* <div className="size-40 relative overflow-hidden rounded-lg mb-5">
+        <div className="absolute w-full top-0 -left-1/2 pt-4 origin-top -rotate-45">
+          <div className="grid place-content-center text-sm bg-red-500 text-white py-1">
+            NEW
+          </div>
+        </div>
+        <div className="h-full bg-white grid place-content-center text-8xl">
+          🍰
+        </div>
+      </div> */}
+
+      {/* <div className="relative flex justify-center bg-blue-200 ">
+        <a className="absolute top-2 left-2 rounded-3xl bg-[#3ea8ff] py-1 px-2 text-xs font-bold text-white">
+        TECH
+        </a>
+        <div className="p-9 text-5xl">🦾</div>
+      </div> */}
+
+
 
       <div>
         <Accordion>

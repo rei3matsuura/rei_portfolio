@@ -13,6 +13,12 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        'rei-cream': '#F4ECE7',
+        'rei-dark': '#3F2B53',
+        'rei-red': '#C4376C',
+        'rei-pink': '#F4ACBA',
+      },
     },
   },
   plugins: [],
