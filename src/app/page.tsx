@@ -1,5 +1,5 @@
 'use client'
-import { Accordion, AccordionDetails, AccordionSummary, AppBar, Avatar, Box, Button, Container, IconButton, Menu, Toolbar, Tooltip, Typography } from "@mui/material";
+import { Accordion, AccordionDetails, AccordionSummary, AppBar, Avatar, Box, Button, Container, IconButton, Menu, Toolbar, Tooltip, Typography,Stack } from "@mui/material";
 import Image from "next/image";
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
@@ -34,9 +34,9 @@ function ResponsiveAppBar() {
   return (
     <div>
   <AppBar position="static">
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+      <Container maxWidth="xl" className = 'bg-rei-red'>
+        <Toolbar disableGutters >
+          {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
           <Typography
             variant="h6"
             noWrap
@@ -203,6 +203,8 @@ export function Home() {
 
 
       <div className="flex w-full max-w-5xl items-center justify-around font-mono lg:flex mb-20">
+        
+        {/* <Stack> */}
         <div className="flex flex-col justify-center p-8 text-center">
           <h1 className="text-rei-red text-6xl font-bold mb-3">
             松浦　麗
@@ -211,6 +213,16 @@ export function Home() {
             MATSUURA REI
           </p>
         </div>
+
+        {/* <Stack className="text-rei-red" width={"100%"}>
+          <Typography variant="h2" fontWeight="bold">
+            松浦　麗
+          </Typography>
+          <Typography  variant="h4" fontWeight="bold">
+            MATSUURA REI
+          </Typography>
+        </Stack>
+        </Stack> */}
 
         <div className="flex justify-center items-center p-8">
         <Image
