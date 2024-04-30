@@ -270,7 +270,7 @@ export function Home() {
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              My hobby is doing ballet.
+              ３歳の頃からクラシックバレエを習ってた．
             </Typography>
           </AccordionDetails>
         </Accordion>
