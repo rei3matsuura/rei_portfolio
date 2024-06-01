@@ -13,11 +13,17 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      // colors: {
+      //   'rei-cream': '#F4ECE7',
+      //   'rei-dark': '#3F2B53',
+      //   'rei-red': '#C4376C',
+      //   'rei-pink': '#F4ACBA',
+      // },
       colors: {
-        'rei-cream': '#F4ECE7',
-        'rei-dark': '#3F2B53',
-        'rei-red': '#C4376C',
-        'rei-pink': '#F4ACBA',
+        'rei-cream': '#FCF7F1',
+        'rei-pink': '#ED9BB6',
+        'rei-blue': '#5F74BA',
+        'rei-black': '#2B2A4A',
       },
     },
   },
