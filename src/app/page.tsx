@@ -11,6 +11,9 @@ import { ArrowCircleDownRounded, ExpandMore } from "@mui/icons-material";
 import ArrowDropDownRoundedIcon from '@mui/icons-material/ArrowDropDownRounded';
 import EnergySavingsLeafSharpIcon from '@mui/icons-material/EnergySavingsLeafSharp';
 import Link from "next/link";
+import IconCard from './IconCard';
+import IconCardHobbyContent from './IconCardHobbyContent';
+
 
 //const pages = ['Top', 'Education', 'Hobby', 'Activities', 'comment'];
 // const pages = ['Products', 'Pricing', 'Blog'];
@@ -303,13 +306,23 @@ export function Home() {
         </div>
       </div>
 
+      <div className="mb-40">
+        <h1 id='education' className="text-rei-black text-6xl font-bold text-center mb-3">
+          Hobby
+        </h1>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
+          {IconCardHobbyContent.map((hobby, index) => (
+            <IconCard
+              key={index}
+              Icon={hobby.Icon}
+              main_color={hobby.main_color}
+              hobby_JPN={hobby.hobby_JPN}
+              hobby_ENG={hobby.hobby_ENG}
+            />
+          ))}
+        </div>
+      </div>
 
-      <h1 id='hobby' className="text-rei-pink text-6xl font-bold mb-3">
-        Hobby
-        <div className="border border-blue-400">クラシックバレエ</div>
-        <div>a</div>
-        <div>a</div>
-      </h1>
       <h1 id='activities' className="text-rei-pink text-6xl font-bold mb-3">
         学歴
         <div>a</div>
