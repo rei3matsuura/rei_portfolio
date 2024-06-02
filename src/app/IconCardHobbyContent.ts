@@ -6,19 +6,22 @@ import SportsSoccerIcon from '@mui/icons-material/SportsSoccer';
 const hobbies = [
   {
     Icon: SportsSoccerIcon,
-    main_color: "rei-pink",
+    Icon_color: "rei-pink",
+    bottom_color: "rei-pink",
     hobby_JPN: "バレエ",
     hobby_ENG: "Ballet"
   },
   {
     Icon: PianoIcon,
-    main_color: "rei-blue",
+    Icon_color: "rei-blue",
+    bottom_color: "rei-blue",
     hobby_JPN: "ピアノ",
     hobby_ENG: "Piano"
   },
   {
     Icon: SportsEsportsIcon,
-    main_color: "rei-pink",
+    Icon_color: "rei-pink",
+    bottom_color: "rei-pink",
     hobby_JPN: "ゲーム",
     hobby_ENG: "Game"
   },
