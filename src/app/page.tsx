@@ -20,7 +20,7 @@ import IconCardHobbyContent from './IconCardHobbyContent';
 //top
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
-  const pages = ['Top', 'Education', 'Hobby', 'Activities', 'Comment'];
+  const pages = ['Top', 'Education', 'Hobby', 'Works', 'Activities'];
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -139,54 +139,45 @@ export function Home() {
         />
       </div> */}
 
+      <section className="h-screen border-none flex-row justify-center content-center " id="top">
+        <div className="flex w-full max-w-5xl items-center justify-around font-mono lg:flex mb-20">
+          {/* <Stack> */}
+          <div className="flex flex-col justify-center p-8 text-center">
+            <h1 className="text-rei-black text-6xl font-bold mb-3">
+              松浦　麗
+            </h1>
+            <p className="text-rei-black text-4xl font-semibold">
+              MATSUURA REI
+            </p>
+          </div>
 
-      <div id="top" className="flex w-full max-w-5xl items-center justify-around font-mono lg:flex mb-20">
-        {/* <Stack> */}
-        <div className="flex flex-col justify-center p-8 text-center">
-          <h1 className="text-rei-black text-6xl font-bold mb-3">
-            松浦　麗
-          </h1>
-          <p className="text-rei-black text-4xl font-semibold">
-            MATSUURA REI
-          </p>
+          <div className="flex justify-center items-center p-8">
+          <Image
+            className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
+            src="/next.svg"
+            alt="Next.js Logo"
+            width={130} //元は100んでも，next.svgなら180
+            height={24} //37でもOK？
+            priority
+            />
+          </div>
         </div>
 
-        {/* <Stack className="text-rei-pink" width={"100%"}>
-          <Typography variant="h2" fontWeight="bold">
-            松浦　麗
-          </Typography>
-          <Typography  variant="h4" fontWeight="bold">
-            MATSUURA REI
-          </Typography>
-        </Stack>
-        </Stack> */}
 
-        <div className="flex justify-center items-center p-8">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={130} //元は100んでも，next.svgなら180
-          height={24} //37でもOK？
-          priority
-          />
-        </div>
-      </div>
-
-
-      <div className="relative flex flex justify-center overflow-hidden rounded-lg bg-rei-pink mb-40">
-        <div className="absolute top-2 left-2 rounded-3xl bg-rei-pink py-1 px-2 text-lg font-bold text-rei-cream">
-          基本情報
-        </div>
-        <div className="h-60 w-[700px] text-rei-dark text-2xl h-full bg-rei-cream grid place-content-center">
-          {/* <div>
-            　
+        <div className="relative flex flex justify-center overflow-hidden rounded-lg bg-rei-pink mb-40">
+          {/* <div className="absolute top-2 left-2 rounded-3xl bg-rei-pink py-1 px-2 text-lg font-bold text-rei-cream">
+            基本情報
           </div> */}
-          <div>2001.7.22生</div>
-          <div>広島出身（「じゃけん」「じゃけぇ」より「じゃけー」派）</div>
-          <div>ポメラニアン好き</div>
+          <div className="h-60 w-[700px] text-rei-dark text-2xl h-full bg-rei-cream grid place-content-center">
+            {/* <div>
+              　
+            </div> */}
+            <div>2001.7.22生</div>
+            <div>広島出身（「じゃけん」「じゃけぇ」より「じゃけー」派）</div>
+            <div>ポメラニアン好き</div>
+          </div>
         </div>
-      </div>
+      </section>
 
       {/* <div className="size-40 relative overflow-hidden rounded-lg mb-5">
         <div className="absolute w-full top-0 -left-1/2 pt-4 origin-top -rotate-45">
@@ -307,7 +298,7 @@ export function Home() {
       </div>
 
       <div className="mb-40">
-        <h1 id='education' className="text-rei-black text-6xl font-bold text-center mb-3">
+        <h1 id='hobby' className="text-rei-black text-6xl font-bold text-center mb-3">
           Hobby
         </h1>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
@@ -315,7 +306,8 @@ export function Home() {
             <IconCard
               key={index}
               Icon={hobby.Icon}
-              main_color={hobby.main_color}
+              Icon_color={hobby.Icon_color}
+              bottom_color={hobby.bottom_color}
               hobby_JPN={hobby.hobby_JPN}
               hobby_ENG={hobby.hobby_ENG}
             />
@@ -323,53 +315,35 @@ export function Home() {
         </div>
       </div>
 
-      <h1 id='activities' className="text-rei-pink text-6xl font-bold mb-3">
-        学歴
-        <div>a</div>
-        <div>a</div>
-      </h1>
-      <h1 id='comment' className="text-rei-pink text-6xl font-bold mb-3">
-        活動
-        <div>a</div>
-        <div>a</div>
-      </h1>
-
-
-
-
-      <div>
-        <Accordion>
-          <AccordionSummary
-            expandIcon={<ArrowDownwardIcon />}
-            aria-controls="panel1-content"
-            id="panel1-header"
-          >
-            <Typography>hobby 1</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography>
-              ３歳の頃からクラシックバレエを習ってた．
-            </Typography>
-          </AccordionDetails>
-        </Accordion>
-        <Accordion>
-          <AccordionSummary
-            expandIcon={<ArrowCircleDownRounded />}
-            aria-controls="panel2-content"
-            id="panel2-header"
-          >
-            <Typography>hobby 2</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-              malesuada lacus ex, sit amet blandit leo lobortis eget.
-            </Typography>
-          </AccordionDetails>
-        </Accordion>
+      <div className="mb-40">
+        <h1 id='works' className="text-rei-black text-6xl font-bold text-center mb-3">
+          Works
+        </h1>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
+          {IconCardHobbyContent.map((hobby, index) => (
+            <IconCard
+              key={index}
+              Icon={hobby.Icon}
+              Icon_color={hobby.Icon_color}
+              bottom_color={hobby.bottom_color}
+              hobby_JPN={hobby.hobby_JPN}
+              hobby_ENG={hobby.hobby_ENG}
+            />
+          ))}
+        </div>
       </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
+      <div className="mb-40">
+        <h1 id='activities' className="text-rei-black text-6xl font-bold text-center mb-3">
+          Activities
+        </h1>
+        <div>
+          Candleなど.なんか。
+        </div>
+      </div>
+
+
+      {/* <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
         <a
           href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
@@ -437,7 +411,7 @@ export function Home() {
             Instantly deploy your Next.js site to a shareable URL with Vercel.
           </p>
         </a>
-      </div>
+      </div> */}
     </main>
   );
 }
