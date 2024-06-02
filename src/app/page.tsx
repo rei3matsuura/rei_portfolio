@@ -163,7 +163,6 @@ export function Home() {
           </div>
         </div>
 
-
         <div className="relative flex flex justify-center overflow-hidden rounded-lg bg-rei-pink mb-40">
           {/* <div className="absolute top-2 left-2 rounded-3xl bg-rei-pink py-1 px-2 text-lg font-bold text-rei-cream">
             基本情報
@@ -179,168 +178,158 @@ export function Home() {
         </div>
       </section>
 
-      {/* <div className="size-40 relative overflow-hidden rounded-lg mb-5">
-        <div className="absolute w-full top-0 -left-1/2 pt-4 origin-top -rotate-45">
-          <div className="grid place-content-center text-sm bg-red-500 text-white py-1">
-            NEW
+      <section className="h-screen border-none flex-row justify-center content-center " id="education">
+        <div className="mb-40">
+          <h1 className="text-rei-black text-6xl font-bold text-center mb-10">
+            Education
+          </h1>
+          <div>
+            <Accordion>
+              <AccordionSummary
+                expandIcon={<ArrowDropDownRoundedIcon />}
+                aria-controls="edu_JHS-content"
+                id="edu_JHS-header"
+              >
+                <Box display="flex" alignItems="center">
+                  <Box
+                    className="flex items-center justify-center w-6 h-6 rounded-full border-2 border-rei-pink text-rei-pink mr-2"
+                  >
+                    <EnergySavingsLeafSharpIcon fontSize="small" />
+                  </Box>
+                  <Typography>
+                    【中学校】近畿大学附属広島中学校東広島校
+                  </Typography>
+                </Box>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography>
+                  中学受験して入学．ダンス部に所属．
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+            <Accordion>
+              <AccordionSummary
+                expandIcon={<ArrowDropDownRoundedIcon />}
+                aria-controls="edu_HS-content"
+                id="edu_HS-header"
+              >
+                <Box display="flex" alignItems="center">
+                  <Box
+                    className="flex items-center justify-center w-6 h-6 rounded-full border-2 border-rei-blue text-rei-blue mr-2"
+                  >
+                    <EnergySavingsLeafSharpIcon fontSize="small" />
+                  </Box>
+                  <Typography>
+                    【高校】近畿大学附属広島高等学校東広島校
+                  </Typography>
+                </Box>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography>
+                  家庭科部部長．近大附属生のトップ合宿に参加．
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+            <Accordion>
+              <AccordionSummary
+                expandIcon={<ArrowDropDownRoundedIcon />}
+                aria-controls="edu_UNIV-content"
+                id="edu_UNIV-header"
+              >
+                <Box display="flex" alignItems="center">
+                  <Box
+                    className="flex items-center justify-center w-6 h-6 rounded-full border-2 border-rei-pink text-rei-pink mr-2"
+                  >
+                    <EnergySavingsLeafSharpIcon fontSize="small" />
+                  </Box>
+                  <Typography>
+                    【大学】大阪府立大学
+                  </Typography>
+                </Box>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography>
+                  工学域電気電子系学類に入学．2回生から情報工学課程に所属．3回生後期から知能メディア処理研究グループに所属．
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+            <Accordion>
+              <AccordionSummary
+                expandIcon={<ArrowDropDownRoundedIcon />}
+                aria-controls="edu_MST-content"
+                id="edu_MST-header"
+              >
+                <Box display="flex" alignItems="center">
+                  <Box
+                    className="flex items-center justify-center w-6 h-6 rounded-full border-2 border-rei-blue text-rei-blue mr-2"
+                  >
+                    <EnergySavingsLeafSharpIcon fontSize="small" />
+                  </Box>
+                  <Typography>
+                    【大学院】大阪公立大学大学院
+                  </Typography>
+                </Box>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography>
+                  情報工学研究科基幹情報学専攻知能情報学分野に入学．大阪公立大学の理系女子大学院生チームのIRISに所属．
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
           </div>
         </div>
-        <div className="h-full bg-white grid place-content-center text-8xl">
-          🍰
-        </div>
-      </div> */}
+      </section>
 
-      {/* <div className="relative flex justify-center bg-blue-200 ">
-        <a className="absolute top-2 left-2 rounded-3xl bg-[#3ea8ff] py-1 px-2 text-xs font-bold text-white">
-        TECH
-        </a>
-        <div className="p-9 text-5xl">🦾</div>
-      </div> */}
-
-      <div className="mb-40">
-        <h1 id='education' className="text-rei-black text-6xl font-bold text-center mb-3">
-          Education
-        </h1>
-        <div>
-          <Accordion>
-            <AccordionSummary
-              expandIcon={<ArrowDropDownRoundedIcon />}
-              aria-controls="edu_JHS-content"
-              id="edu_JHS-header"
-            >
-              <Box display="flex" alignItems="center">
-                <Box
-                  className="flex items-center justify-center w-6 h-6 rounded-full border-2 border-rei-pink text-rei-pink mr-2"
-                >
-                  <EnergySavingsLeafSharpIcon fontSize="small" />
-                </Box>
-                <Typography>
-                  【中学校】近畿大学附属広島中学校東広島校
-                </Typography>
-              </Box>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography>
-                中学受験して入学．ダンス部に所属．
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-          <Accordion>
-            <AccordionSummary
-              expandIcon={<ArrowDropDownRoundedIcon />}
-              aria-controls="edu_HS-content"
-              id="edu_HS-header"
-            >
-              <Box display="flex" alignItems="center">
-                <Box
-                  className="flex items-center justify-center w-6 h-6 rounded-full border-2 border-rei-blue text-rei-blue mr-2"
-                >
-                  <EnergySavingsLeafSharpIcon fontSize="small" />
-                </Box>
-                <Typography>
-                  【高校】近畿大学附属広島高等学校東広島校
-                </Typography>
-              </Box>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography>
-                家庭科部部長．近大附属生のトップ合宿に参加．
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-          <Accordion>
-            <AccordionSummary
-              expandIcon={<ArrowDropDownRoundedIcon />}
-              aria-controls="edu_UNIV-content"
-              id="edu_UNIV-header"
-            >
-              <Box display="flex" alignItems="center">
-                <Box
-                  className="flex items-center justify-center w-6 h-6 rounded-full border-2 border-rei-pink text-rei-pink mr-2"
-                >
-                  <EnergySavingsLeafSharpIcon fontSize="small" />
-                </Box>
-                <Typography>
-                  【大学】大阪府立大学
-                </Typography>
-              </Box>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography>
-                工学域電気電子系学類に入学．2回生から情報工学課程に所属．3回生後期から知能メディア処理研究グループに所属．
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-          <Accordion>
-            <AccordionSummary
-              expandIcon={<ArrowDropDownRoundedIcon />}
-              aria-controls="edu_MST-content"
-              id="edu_MST-header"
-            >
-              <Box display="flex" alignItems="center">
-                <Box
-                  className="flex items-center justify-center w-6 h-6 rounded-full border-2 border-rei-blue text-rei-blue mr-2"
-                >
-                  <EnergySavingsLeafSharpIcon fontSize="small" />
-                </Box>
-                <Typography>
-                  【大学院】大阪公立大学大学院
-                </Typography>
-              </Box>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography>
-                情報工学研究科基幹情報学専攻知能情報学分野に入学．大阪公立大学の理系女子大学院生チームのIRISに所属．
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
+      <section className="h-screen border-none flex-row justify-center content-center " id="hobby">
+        <div className="mb-40">
+          <h1 className="text-rei-black text-6xl font-bold text-center mb-10">
+            Hobby
+          </h1>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
+            {IconCardHobbyContent.map((hobby, index) => (
+              <IconCard
+                key={index}
+                Icon={hobby.Icon}
+                Icon_color={hobby.Icon_color}
+                bottom_color={hobby.bottom_color}
+                hobby_JPN={hobby.hobby_JPN}
+                hobby_ENG={hobby.hobby_ENG}
+              />
+            ))}
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div className="mb-40">
-        <h1 id='hobby' className="text-rei-black text-6xl font-bold text-center mb-3">
-          Hobby
-        </h1>
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
-          {IconCardHobbyContent.map((hobby, index) => (
-            <IconCard
-              key={index}
-              Icon={hobby.Icon}
-              Icon_color={hobby.Icon_color}
-              bottom_color={hobby.bottom_color}
-              hobby_JPN={hobby.hobby_JPN}
-              hobby_ENG={hobby.hobby_ENG}
-            />
-          ))}
+      <section className="h-screen border-none flex-row justify-center content-center " id="works">
+        <div className="mb-40">
+          <h1 className="text-rei-black text-6xl font-bold text-center mb-10">
+            Works
+          </h1>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
+            {IconCardHobbyContent.map((hobby, index) => (
+              <IconCard
+                key={index}
+                Icon={hobby.Icon}
+                Icon_color={hobby.Icon_color}
+                bottom_color={hobby.bottom_color}
+                hobby_JPN={hobby.hobby_JPN}
+                hobby_ENG={hobby.hobby_ENG}
+              />
+            ))}
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div className="mb-40">
-        <h1 id='works' className="text-rei-black text-6xl font-bold text-center mb-3">
-          Works
-        </h1>
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
-          {IconCardHobbyContent.map((hobby, index) => (
-            <IconCard
-              key={index}
-              Icon={hobby.Icon}
-              Icon_color={hobby.Icon_color}
-              bottom_color={hobby.bottom_color}
-              hobby_JPN={hobby.hobby_JPN}
-              hobby_ENG={hobby.hobby_ENG}
-            />
-          ))}
+      <section className="h-screen border-none flex-row justify-center content-center " id="activities">
+        <div className="mb-40">
+          <h1 className="text-rei-black text-6xl font-bold text-center mb-10">
+            Activities
+          </h1>
+          <div>
+            Candleなど.なんか。
+          </div>
         </div>
-      </div>
-
-      <div className="mb-40">
-        <h1 id='activities' className="text-rei-black text-6xl font-bold text-center mb-3">
-          Activities
-        </h1>
-        <div>
-          Candleなど.なんか。
-        </div>
-      </div>
+      </section>
 
 
       {/* <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
