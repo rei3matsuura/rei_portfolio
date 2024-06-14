@@ -324,15 +324,12 @@ export function Home() {
         </div>
       </section>
 
-      <section className="h-screen border-none flex-row justify-center content-center " id="activities">
-        <div className="mb-40">
+      <section className="h-screen w-full border-none flex flex-row justify-center content-center " id="activities">
+        <div className="mb-40 w-4/5">
           <h1 className="text-rei-black text-6xl font-bold text-center mb-10">
             Activities
           </h1>
-          <div>
-            Candleなど.なんか。
-          </div>
-          <div className="flex flex-col items-center justify-center min-h-screen py-2">
+          <div className="flex flex-col items-center justify-center py-2">
             {/* <div className="flex space-x-4">
               {BubbleContent.map((activity, index) => (
                   <CursorBubble
@@ -347,16 +344,16 @@ export function Home() {
                 // />
               ))}
             </div> */}
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
-            {BubbleContent.map((activity, index) => (
-              <CursorBubble
-                key={index}
-                activity={activity.activity}
-                detail={activity.detail}
-                circle_color={activity.circle_color}
-              />
-            ))}
-          </div>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '32px' }}>
+              {BubbleContent.map((activity, index) => (
+                <CursorBubble
+                  key={index}
+                  activity={activity.activity}
+                  detail={activity.detail}
+                  circle_color={activity.circle_color}
+                />
+              ))}
+            </div>
             {/* <DogIconWithTooltip message={activity.detail} /> */}
           </div>
         </div>

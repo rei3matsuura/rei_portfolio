@@ -13,8 +13,8 @@ interface CursorBubbleProps {
 }
 
 const IconContainer = styled(Box)(({ theme }) => ({
-  width: '4rem', // Tailwindのw-16に相当
-  height: '4rem', // Tailwindのh-16に相当
+  width: '12rem', // 4remのときTailwindのw-16に相当 12remがちょうどいい
+  height: '12rem', // Tailwindのh-16に相当
   // backgroundColor: 'blue', // 必要に応じて背景色を設定
   color: 'white', // テキストの色を設定
   borderRadius: '50%', // Tailwindのrounded-fullに相当
@@ -34,7 +34,7 @@ function CursorBubble({ activity, detail, circle_color }: CursorBubbleProps) {
     <Container>
       <IconContainer className={`bg-${circle_color}`}>
       {/* <IconContainer className={"bg-rei-blue"}> */}
-        <Typography className={"text-rei-cream"} variant="h5">{activity}</Typography>
+        <Typography className={"text-rei-cream"} variant="h4">{activity}</Typography>
       </IconContainer>
     </Container>
   );
