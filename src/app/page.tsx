@@ -7,12 +7,15 @@ import AdbIcon from '@mui/icons-material/Adb';
 import MenuItem from '@mui/material/MenuItem';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useState } from "react";
-import { ArrowCircleDownRounded, ExpandMore } from "@mui/icons-material";
+import { ArrowCircleDownRounded, ExpandMore, LocalActivityTwoTone } from "@mui/icons-material";
 import ArrowDropDownRoundedIcon from '@mui/icons-material/ArrowDropDownRounded';
 import EnergySavingsLeafSharpIcon from '@mui/icons-material/EnergySavingsLeafSharp';
 import Link from "next/link";
 import IconCard from './IconCard';
 import IconCardHobbyContent from './IconCardHobbyContent';
+import CursorBubble from './CursorBubble';
+import BubbleContent from './BubbleContent';
+// import { detail } from './BubbleContent';
 
 
 //const pages = ['Top', 'Education', 'Hobby', 'Activities', 'comment'];
@@ -100,6 +103,7 @@ function ResponsiveAppBar() {
 export default ResponsiveAppBar;
 
 export function Home() {
+  // const [activeMessage, setActiveMessage] = useState(detail[1]);
   return (
     <main className="bg-rei-cream flex min-h-screen flex-col items-center justify-between p-24">
       {/* <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
@@ -327,6 +331,33 @@ export function Home() {
           </h1>
           <div>
             Candleなど.なんか。
+          </div>
+          <div className="flex flex-col items-center justify-center min-h-screen py-2">
+            {/* <div className="flex space-x-4">
+              {BubbleContent.map((activity, index) => (
+                  <CursorBubble
+                  key={index}
+                  activity={activity.activity}
+                  detail={activity.detail}
+                />
+                // <div
+                //   key={index}
+                //   onMouseEnter={() => setActiveMessage(activity.detail)}
+                //   className="w-12 h-12 bg-blue-500 rounded-full cursor-pointer hover:bg-blue-700"
+                // />
+              ))}
+            </div> */}
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
+            {BubbleContent.map((activity, index) => (
+              <CursorBubble
+                key={index}
+                activity={activity.activity}
+                detail={activity.detail}
+                circle_color={activity.circle_color}
+              />
+            ))}
+          </div>
+            {/* <DogIconWithTooltip message={activity.detail} /> */}
           </div>
         </div>
       </section>

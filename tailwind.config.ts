@@ -20,10 +20,10 @@ const config: Config = {
       //   'rei-pink': '#F4ACBA',
       // },
       colors: {
-        'rei-cream': '#FCF7F1',
         'rei-pink': '#ED9BB6',
         'rei-blue': '#5F74BA',
         'rei-black': '#2B2A4A',
+        'rei-cream': '#FCF7F1',
       },
     },
   },
